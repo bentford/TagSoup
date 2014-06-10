@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <DTCoreText/DTCoreText.h>
+#import "EasyLayout.h"
 
 @interface ViewController ()
 
@@ -21,11 +22,18 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
 	
-    UILabel *label = [[UILabel alloc] initWithFrame:self.view.bounds];
-    label.numberOfLines = 0;
-    [self.view addSubview:label];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:scrollView];
     
+    UILabel *label = [[UILabel alloc] initWithFrame:self.view.bounds];
     label.attributedText = [self stringFromTestInput];
+    
+    [EasyLayout sizeLabel:label mode:ELLineModeMulti maxWidth:self.view.extWidth];
+    [scrollView addSubview:label];
+    
+    scrollView.contentSize = label.extSize;
+    
+
 }
 
 - (NSAttributedString *)stringFromTestInput
