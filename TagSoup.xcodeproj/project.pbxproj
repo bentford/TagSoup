@@ -20,7 +20,32 @@
 		B58CBE9619475A33005B9B5A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58CBE9519475A33005B9B5A /* CoreText.framework */; };
 		B58CBE9819475A3E005B9B5A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58CBE9719475A3E005B9B5A /* ImageIO.framework */; };
 		B58CBE9A19475A52005B9B5A /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B58CBE9919475A52005B9B5A /* libxml2.2.dylib */; };
+		B58CBEB019479158005B9B5A /* libEasyLayoutLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B58CBEAD19479150005B9B5A /* libEasyLayoutLibrary.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B58CBEAC19479150005B9B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58CBEA719479150005B9B5A /* EasyLayoutLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3509B9C61819CEC80093F714;
+			remoteInfo = EasyLayoutLibrary;
+		};
+		B58CBEAE19479150005B9B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58CBEA719479150005B9B5A /* EasyLayoutLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3509B9D61819CEC80093F714;
+			remoteInfo = EasyLayoutLibraryTests;
+		};
+		B58CBEB11947915D005B9B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B58CBEA719479150005B9B5A /* EasyLayoutLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3509B9C51819CEC80093F714;
+			remoteInfo = EasyLayoutLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B58CBE5419475875005B9B5A /* TagSoup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagSoup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +67,7 @@
 		B58CBE9519475A33005B9B5A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B58CBE9719475A3E005B9B5A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		B58CBE9919475A52005B9B5A /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		B58CBEA719479150005B9B5A /* EasyLayoutLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyLayoutLibrary.xcodeproj; path = EasyLayout/EasyLayoutLibrary.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58CBEB019479158005B9B5A /* libEasyLayoutLibrary.a in Frameworks */,
 				B58CBE9A19475A52005B9B5A /* libxml2.2.dylib in Frameworks */,
 				B58CBE9819475A3E005B9B5A /* ImageIO.framework in Frameworks */,
 				B58CBE9619475A33005B9B5A /* CoreText.framework in Frameworks */,
@@ -70,6 +97,7 @@
 				B58CBE5E19475875005B9B5A /* Supporting Files */,
 				B58CBE5619475875005B9B5A /* Frameworks */,
 				B58CBE5519475875005B9B5A /* Products */,
+				B58CBEA719479150005B9B5A /* EasyLayoutLibrary.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +149,15 @@
 			path = TagSoup;
 			sourceTree = "<group>";
 		};
+		B58CBEA819479150005B9B5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B58CBEAD19479150005B9B5A /* libEasyLayoutLibrary.a */,
+				B58CBEAF19479150005B9B5A /* EasyLayoutLibraryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +172,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B58CBEB21947915D005B9B5A /* PBXTargetDependency */,
 			);
 			name = TagSoup;
 			productName = TagSoup;
@@ -161,12 +199,35 @@
 			mainGroup = B58CBE4B19475874005B9B5A;
 			productRefGroup = B58CBE5519475875005B9B5A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B58CBEA819479150005B9B5A /* Products */;
+					ProjectRef = B58CBEA719479150005B9B5A /* EasyLayoutLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B58CBE5319475875005B9B5A /* TagSoup */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B58CBEAD19479150005B9B5A /* libEasyLayoutLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEasyLayoutLibrary.a;
+			remoteRef = B58CBEAC19479150005B9B5A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B58CBEAF19479150005B9B5A /* EasyLayoutLibraryTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EasyLayoutLibraryTests.xctest;
+			remoteRef = B58CBEAE19479150005B9B5A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B58CBE5219475875005B9B5A /* Resources */ = {
@@ -192,6 +253,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B58CBEB21947915D005B9B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyLayoutLibrary;
+			targetProxy = B58CBEB11947915D005B9B5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B58CBE6019475875005B9B5A /* InfoPlist.strings */ = {
@@ -288,6 +357,7 @@
 				GCC_PREFIX_HEADER = "TagSoup/TagSoup-Prefix.pch";
 				INFOPLIST_FILE = "TagSoup/TagSoup-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/EasyLayoutLibrary";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -305,6 +375,7 @@
 				GCC_PREFIX_HEADER = "TagSoup/TagSoup-Prefix.pch";
 				INFOPLIST_FILE = "TagSoup/TagSoup-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/EasyLayoutLibrary";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -328,6 +399,7 @@
 				B58CBE8819475875005B9B5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
