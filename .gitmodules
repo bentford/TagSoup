@@ -1,3 +1,6 @@
 [submodule "EasyLayout"]
 	path = EasyLayout
 	url = http://github.com/bentford/EasyLayout
+[submodule "iOSToolbelt"]
+	path = iOSToolbelt
+	url = http://github.com/bentford/iOSToolbelt

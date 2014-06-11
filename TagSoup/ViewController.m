@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <DTCoreText/DTCoreText.h>
 #import "EasyLayout.h"
+#import "TBPerfUtil.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,9 @@
     [self.view addSubview:scrollView];
     
     UILabel *label = [[UILabel alloc] initWithFrame:self.view.bounds];
+    [[TBPerfUtil singleton] markTimeWithName:@"parse"];
     label.attributedText = [self stringFromTestInput];
+    [[TBPerfUtil singleton] markTimeWithName:@"parse"];
     
     [EasyLayout sizeLabel:label mode:ELLineModeMulti maxWidth:self.view.extWidth];
     [scrollView addSubview:label];
